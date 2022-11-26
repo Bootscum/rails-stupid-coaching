@@ -1,0 +1,14 @@
+<div class="container">
+<h1>Message from the coach!</h1>
+<h3>"The Coach hates you"</h3>
+  <div id="question"><h3>You asked: <%= params[:answer] %> </h3></div>
+      <% if params[:answer].include?("?") %>
+        <h2><strong>"Silly question, get dressed and go to work!"<strong></h2>
+      <% elsif params[:answer].downcase == "i am going to work right now!" %>
+        <h2> "" </h2>
+      <% else %>
+       <h2> <strong> "I don't care, get dressed and go to work!" <strong></h2>
+      <%end%>
+<a class="btn" href="/ask">Ask a question</a>
+</div>
+<%# <%= link_to "Ask a new question", '/ask'%>
